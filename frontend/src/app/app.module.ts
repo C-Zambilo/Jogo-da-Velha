@@ -1,3 +1,4 @@
+import {MatButtonModule} from '@angular/material/button';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     FormsModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

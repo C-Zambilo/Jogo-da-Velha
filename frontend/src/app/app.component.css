@@ -1,0 +1,24 @@
+.wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.container {
+  width: 60vmin;
+  height: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vmin;
+}
+.botaoPosicao {
+  background: #ffffff;
+  height: 14vmin;
+  width: 14vmin;
+  border: none;
+  border-radius: 8px;
+  font-size: 12vmin;
+  color: #d161ff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}

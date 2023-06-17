@@ -1,22 +1,65 @@
 <div class="h-100 d-flex justify-content-center align-items-center">
-  <div class="col-md-6" style="background-color: white;">
-    <div class="row d-flex justify-content-around">
-      <div class="col-md-3">
-        <mat-form-field>
-          <mat-label>Player 1</mat-label>
-          <input matInput placeholder="Player 1" value="">
-        </mat-form-field>
+  {{titulo}}
+  <div>
+    <div class="fixed-top" style="background-color: rgb(247, 67, 148);">
+      <h1> Caroline de Oliveira - ADS</h1>
+    </div>
+    <div *ngIf="!emJogo">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-6">
+          <img src="../assets/heart.png">
+        </div>
       </div>
 
-      <div class="col-md-3">
-        <mat-form-field>
-          <mat-label>Player 2</mat-label>
-          <input matInput placeholder="Player 2" value="">
-        </mat-form-field>
+      <div class="row d-flex justify-content-around">
+        <div class="col-md-3">
+          <mat-form-field>
+            <mat-label>Player 1</mat-label>
+            <input matInput placeholder="Player 1" value="" (change)="playerInserido()" [(ngModel)]="player1">
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-3">
+          <mat-form-field>
+            <mat-label>Player 2</mat-label>
+            <input matInput placeholder="Player 2" value="">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <button class="col-6 col-md-4" mat-raised-button color="accent" (click)="iniciarJogo()">Jogar</button>
       </div>
     </div>
+  </div>
+
+  <div *ngIf="emJogo" style="width: 100%;" class="row d-flex justify-content-center align-items-center">
     <div class="row">
-      
+      <div class="col-sm-3">
+        placar
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="EspacamentoJogo">
+        <div class="container">
+          <button class="botaoPosicao"></button>
+          <button class="botaoPosicao"></button>
+          <button class="botaoPosicao"></button>
+          <button class="botaoPosicao"></button>
+          <button class="botaoPosicao"></button>
+          <button class="botaoPosicao"></button>
+          <button class="botaoPosicao"></button>
+          <button class="botaoPosicao"></button>
+          <button class="botaoPosicao"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row d-flex justify-content-center">
+        <button class="col-6 col-md-4" mat-raised-button color="accent" (click)="finalizarJogo()">Sair</button>
+      </div>
     </div>
   </div>
-</div>
+
+    

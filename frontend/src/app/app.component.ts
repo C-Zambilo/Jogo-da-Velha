@@ -6,6 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'frontend';
-  value = "nada"
+  titulo = "";
+  player1 = "";
+  emJogo = false;
+
+  playerInserido() {
+    console.log(this.player1);
+  }
+
+  iniciarJogo() {
+    console.log("vamos começar");
+    this.emJogo = true;
+  }
+
+  finalizarJogo() {
+    this.emJogo = false;
+
+  }
 }
